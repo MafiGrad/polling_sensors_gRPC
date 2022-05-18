@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.grpctry";
+option java_outer_classname = "TryProto";
+option objc_class_prefix = "TRY";
+
+package grpc_try;
+
+service Sensors {
+
+    rpc RelayState (RelayRequest) returns (RelayResponse) {}
+}
+
+message RelayRequest {
+    string name = 1;
+    uint32 count = 2;
+    uint32 position = 3;
+}
+
+message RelayResponse {
+    string name = 1;
+    uint32 state = 2;
+}
