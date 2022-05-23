@@ -8,5 +8,8 @@ def run():
         response = stub.RelayState(try_protos_pb2.RelayRequest(name="PC Client", count=8,position=10))
     print(f"States on {response.name} is: {response.state}")
 
-if __name__ == '__main__':
+def main():
     run()
+
+if __name__ == '__main__':
+    main()
